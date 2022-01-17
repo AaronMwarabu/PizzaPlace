@@ -1,0 +1,15 @@
+#landingPage{
+    line-height: 4rem;
+}
+#landingPage h1{
+    font-size: 46px;
+    font-weight: 800;
+}
+#landingPage h2{
+    font-size: 34px;
+    font-weight: 600;
+}
+#landingPage p{
+    font-size: 30px;
+    font-weight: 600;
+}
