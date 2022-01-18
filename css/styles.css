@@ -1,6 +1,14 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+.navbar-brand{
+    font-size: 30px;
+}
+.navbar-brand i:hover{
+    color: indianred;
+}
+
+/* Landing Page */
 #landingPage{
     line-height: 4rem;
 }
@@ -18,4 +26,11 @@
 }
 .heading h2:hover{
     color: green;
+}
+/* Order */
+#orderCheckout{
+    display: none;
+}
+#newAddress{
+    display: none;
 }
