@@ -29,6 +29,7 @@ $(document).ready(function () {
         return this.street + ", " + this.city + ", " + this.county;
     }
 
+    // User Interface Logic
     function resetFields() {
         $("input#pizzaNumber").val("");
         $("input#county").val("");
@@ -92,12 +93,15 @@ $(document).ready(function () {
         let inputtedPizzaNumber = $("input#pizzaNumber").val();
         let newOrder = new Order(inputtedPizzaSize, inputtedPizzaTopping, inputtedPizzaCrust);
 
+
         $("#new-address").each(function () {
             let inputtedCounty = $(this).find("input#county").val();
             let inputtedCity = $(this).find("input#city").val();
             let inputtedStreet = $(this).find("input#street").val();
             let newAddress = new Addresses(inputtedCounty, inputtedCity, inputtedStreet);
             newOrder.address.push(newAddress);
+
+            
         });
         
         $("#checkoutBtn").click(function () {
@@ -114,8 +118,10 @@ $(document).ready(function () {
             alert("Order Placed Successfully");
         }
     });
-
+    
+    // Calculating the total order  
     $("#contactUs").submit(function () {
         alert("Thank You For Your Feedback")
-    });  
+    });
+
 });
