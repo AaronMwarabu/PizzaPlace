@@ -39,7 +39,7 @@ $(document).ready(function () {
             '<option selected>Choose Your Pizza Size</option>' +
             '<option value="large">Large</option>' +
             '<option value="medium">Medium</option>' +
-            '<option value="small">Small</option>' +
+            '<option value="large">Large</option>' +
             '</select>' +
             '<div class="topping mt-3">' +
             '<h4>Choose Your Favourite Toppings</h4>' +
@@ -47,4 +47,35 @@ $(document).ready(function () {
             '<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">' +
             '<label class="form-check-label" for="inlineCheckbox1">BBQ (Ksh 100)</label>' +
             '</div>' +
+            '<div class="form-check form-check-inline">' +
+            '<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">' +
+            '<label class="form-check-label" for="inlineCheckbox2">Pepperoni (Ksh 120)</label>' +
+            '</div>' +
+            '<div class="form-check form-check-inline">' +
+            '<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">' +
+            '<label class="form-check-label" for="inlineCheckbox3">Cheese (Ksh 50)</label>' +
+            '</div>' +
+            '<div class="form-check form-check-inline">' +
+            '<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">' +
+            '<label class="form-check-label" for="inlineCheckbox1">Hawaiian (Ksh 100)</label>' +
+            '</div>' +
+            '<div class="form-check form-check-inline">' +
+            '<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">' +
+            '<label class="form-check-label" for="inlineCheckbox1">Margheritha (Ksh 150)</label>' +
+            '</div>' +
+            '<div class="form-check form-check-inline">' +
+            '<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">' +
+            '<label class="form-check-label" for="inlineCheckbox1">Quattro (Ksh 100)</label>' +
+            '</div>' +
+            '</div>' +
+            '<select class="crust form-select mt-3" aria-label="Default select example">' +
+            '<option selected>Choose  Your Pizza Crust</option>' +
+            '<option value="Crispy">Crispy</option>' +
+            '<option value="Stuffed">Stuffed</option>' +
+            '<option value="Gluten-Free">Gluten-Free</option>' +
+            '</select>' +
+            '<input type="number" class="form-control mt-3" id="pizzaNumber" placeholder="Number of pizzas" min="1" required />' +
+            '</div>'
+        );
+    });
 })
