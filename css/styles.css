@@ -5,7 +5,7 @@
     font-size: 30px;
 }
 .navbar-brand i:hover{
-    color: indianred;
+    color: green;
 }
 
 /* Landing Page */
@@ -27,10 +27,7 @@
 .heading h2:hover{
     color: green;
 }
-/* Order */
-#orderCheckout{
-    display: none;
+body {
+    background-color: khaki;
 }
-#newAddress{
-    display: none;
-}
+
