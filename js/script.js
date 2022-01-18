@@ -114,6 +114,8 @@ $(document).ready(function () {
             alert("Order Placed Successfully");
         }
     });
-    
-    
+
+    $("#contactUs").submit(function () {
+        alert("Thank You For Your Feedback")
+    });  
 });
