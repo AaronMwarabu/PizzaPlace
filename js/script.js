@@ -1,6 +1,6 @@
 $(document).ready(function () {
     console.log("Content Loaded");
-
+    
     function Order(size, topping, crust) {
         this.Pizzasize = size;
         this.Pizzatopping = topping;
@@ -21,12 +21,14 @@ $(document).ready(function () {
 
         totalCost = sizeCost + toppingCost + crustCost + deliveryCost;
     }
+
     Order.prototype.fullOrder = function () {
         return "Pizza size: " + this.Pizzasize + " " + "Pizza Topping: " + this.Pizzatopping + " " + "Pizza Crust: " + this.Pizzacrust;
     };
     Addresses.prototype.fullAddress = function () {
         return this.street + ", " + this.city + ", " + this.county;
     }
+
     function resetFields() {
         $("input#pizzaNumber").val("");
         $("input#county").val("");
@@ -39,7 +41,7 @@ $(document).ready(function () {
             '<option selected>Choose Your Pizza Size</option>' +
             '<option value="large">Large</option>' +
             '<option value="medium">Medium</option>' +
-            '<option value="large">Large</option>' +
+            '<option value="small">Small</option>' +
             '</select>' +
             '<div class="topping mt-3">' +
             '<h4>Choose Your Favourite Toppings</h4>' +
@@ -69,7 +71,7 @@ $(document).ready(function () {
             '</div>' +
             '</div>' +
             '<select class="crust form-select mt-3" aria-label="Default select example">' +
-            '<option selected>Choose  Your Pizza Crust</option>' +
+            '<option selected>Choose     Your Pizza Crust</option>' +
             '<option value="Crispy">Crispy</option>' +
             '<option value="Stuffed">Stuffed</option>' +
             '<option value="Gluten-Free">Gluten-Free</option>' +
@@ -78,4 +80,40 @@ $(document).ready(function () {
             '</div>'
         );
     });
-})
+    $('#addDelivery').click(function () {
+        $("#newAddress").show();
+    })
+    $("form#orderForm").submit(function (event) {
+        event.preventDefault();
+
+        let inputtedPizzaSize = $("select.size").val();
+        let inputtedPizzaTopping = $(".topping").val();
+        let inputtedPizzaCrust = $("select.crust").val();
+        let inputtedPizzaNumber = $("input#pizzaNumber").val();
+        let newOrder = new Order(inputtedPizzaSize, inputtedPizzaTopping, inputtedPizzaCrust);
+
+        $("#new-address").each(function () {
+            let inputtedCounty = $(this).find("input#county").val();
+            let inputtedCity = $(this).find("input#city").val();
+            let inputtedStreet = $(this).find("input#street").val();
+            let newAddress = new Addresses(inputtedCounty, inputtedCity, inputtedStreet);
+            newOrder.address.push(newAddress);
+        });
+        
+        $("#checkoutBtn").click(function () {
+            $("#orderCheckout").show();
+            $(".size").text(Order.Pizzasize);
+            $(".topping").text(Order.Pizzatopping);
+            $(".crust").text(Order.Pizzacrust);
+            $(".location").text(Addresses.fullAddress);
+        });
+        
+        let orderConfirmation = false
+        orderConfirmation = confirm("Please confirm your order");
+        if (orderConfirmation == true) {
+            alert("Order Placed Successfully");
+        }
+    });
+    
+    
+});
