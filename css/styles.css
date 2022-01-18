@@ -30,4 +30,7 @@
 body {
     background-color: khaki;
 }
+#orderCheckout{
+    display: none;
+}
 
