@@ -172,6 +172,30 @@
                             <input type="number" class="form-control mt-3" id="pizzaNumber"
                                 placeholder="Number of pizzas" min="1" required />
                         </div>
+                        <div id="newAddress">
+                            <div class="row mt-3">
+                                <h3>Delivery Location</h3>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="location" class="form-label">County</label>
+                                        <input type="text" class="form-control" id="county" placeholder="Nairobi">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="location" class="form-label">Street</label>
+                                        <input type="text" class="form-control" id="street" placeholder="Moi Avenue">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-muted">
+                                <p>Ksh 200 for any delivery</p>
+                            </div>
+                        </div>
+                        <button type="submit" id="addOrder" class="btn btn-primary mt-3">Make Another Order</button>
+                        <button type="submit" id="addDelivery" class="btn btn-primary mt-3">Add Delivery Location</button>
+                        <button type="submit" id="checkOut" class="btn btn-primary mt-3">Check out Order</button>
+                        <button type="submit" id="MakeOrder" class="btn btn-primary mt-3">Make Order</button>
                     </form>
                 </div>
             </div>
